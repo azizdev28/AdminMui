@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../EditStudent/EditStudent.scss";
 
 const EditStudent = ({ studentId, onCancel, onSave }) => {
   const [editedStudentData, setEditedStudentData] = useState({});
@@ -61,7 +62,7 @@ const EditStudent = ({ studentId, onCancel, onSave }) => {
       ) : (
         <div>
           <h2>Edit Student</h2>
-          <form>
+          <form className="EditStudentSe">
             <label>
               Name:
               <input

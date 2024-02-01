@@ -8,3 +8,22 @@
   margin: 0 auto;
   margin-left: 440px;
 }
+.AddNewStudentInput {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    label {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      width: 200px;
+    }
+  }
+}

@@ -32,19 +32,18 @@ const AddNewTeacher = ({ onNewTeacherAdded }) => {
         name: "",
         lastname: "",
         level: "",
-        id: "", // Add other fields as needed
+        id: "",
       });
 
-      // Notify the parent component about the new teacher
       onNewTeacherAdded(response.data);
     } catch (error) {
       console.error("Xatolik:", error);
-      // Handle error if needed
     }
   };
 
   return (
     <div className="AddNewTeacher">
+      <h1>Add New Teacher</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Name:

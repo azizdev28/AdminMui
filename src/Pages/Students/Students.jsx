@@ -98,62 +98,81 @@ const Students = () => {
   };
 
   return (
-    <div className="Students">
-      <div className="StudentsNavbar">
-        <h1>Students List</h1>
-        <input
-          type="text"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={handleSearch}
-        />
-        <select value={selectedGroup} onChange={handleGroupChange}>
-          <option value="all">All Groups</option>
-          <option value="group1">Group 1</option>
-          <option value="group2">Group 2</option>
-        </select>
-      </div>
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>{error}</p>
-      ) : students.length === 0 ? (
-        <p>No students found</p>
-      ) : (
-        <div className="StudentsCard">
-          <ul>
-            {currentStudents.map((student) => (
-              <li key={student.id}>
-                <h3 className="StudentLine">
-                  <span>Name:</span> {student.name}{" "}
-                </h3>
-
-                <h3 className="StudentLine">
-                  <span>Lastname:</span> {student.lastname}{" "}
-                </h3>
-                <p className="StudentLine">
-                  <span>Group:</span>
-                  {student.group}
-                </p>
-                <button onClick={() => handleEdit(student.id)}>Edit</button>
-                <button onClick={() => handleDelete(student.id)}>Delete</button>
-              </li>
-            ))}
-          </ul>
-          <Pagination
-            currentPage={currentPage}
-            totalPages={Math.ceil(filteredStudents.length / studentsPerPage)}
-            onPageChange={paginate}
+    <div className="StItem">
+      <div className="Students">
+        <div className="StudentsNavbar">
+          <h1>Students List</h1>
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={searchTerm}
+            onChange={handleSearch}
           />
+          <select value={selectedGroup} onChange={handleGroupChange}>
+            <option value="all">All Groups</option>
+            <option value="group1">Group 1</option>
+            <option value="group2">Group 2</option>
+          </select>
         </div>
-      )}
-      {editingStudentId && (
-        <EditStudent
-          studentId={editingStudentId}
-          onCancel={handleCancelEdit}
-          onSave={handleSaveEdit}
-        />
-      )}
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>{error}</p>
+        ) : students.length === 0 ? (
+          <p>No students found</p>
+        ) : (
+          <div className="StudentsCard">
+            <ul>
+              {currentStudents.map((student) => (
+                <li key={student.id}>
+                  <h3 className="StudentLine">
+                    <span>Name:</span> {student.name}{" "}
+                  </h3>
+
+                  <h3 className="StudentLine">
+                    <span>Lastname:</span> {student.lastname}{" "}
+                  </h3>
+                  <p className="StudentLine">
+                    <span>Group:</span>
+                    {student.group}
+                  </p>
+                  <button
+                    onClick={() => handleEdit(student.id)}
+                    className="btn"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => handleDelete(student.id)}
+                    className="btn"
+                  >
+                    Delete
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div>
+              <Pagination
+                currentPage={currentPage}
+                totalPages={Math.ceil(
+                  filteredStudents.length / studentsPerPage
+                )}
+                onPageChange={paginate}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="CardSt">
+        {editingStudentId && (
+          <EditStudent
+            studentId={editingStudentId}
+            onCancel={handleCancelEdit}
+            onSave={handleSaveEdit}
+          />
+        )}
+      </div>
     </div>
   );
 };

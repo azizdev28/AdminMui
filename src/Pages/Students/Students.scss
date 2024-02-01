@@ -1,6 +1,6 @@
 .Students {
   width: 960px;
-  height: 460px;
+  height: 360px;
   display: flex;
   background-color: coral;
   align-items: center;
@@ -8,23 +8,67 @@
   flex-direction: column;
   margin: 0 auto;
   margin-left: 300px;
+  gap: 20px;
 }
 
 .StudentsNavbar {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
+
+  input {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+
+  select {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
 }
 
 .StudentsCard {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 
   ul li {
     display: flex;
     align-items: center;
+    gap: 10px;
+  }
+
+  span {
+    color: #fff;
+  }
+  .StudentLine {
+    width: 200px;
+    align-items: start;
+  }
+
+  p {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 9px;
   }
 }
-.StudentLine {
-  width: 200px;
+
+.CardSt {
+  width: 960px;
+  height: 160px;
+  display: flex;
+  background-color: coral;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-left: 300px;
+  gap: 70px;
 }
