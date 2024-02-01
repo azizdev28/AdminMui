@@ -1,0 +1,54 @@
+.Profil {
+  width: 900px;
+  height: 400px;
+  display: flex;
+  background-color: coral;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: 340px;
+}
+
+.AdminProfil {
+  width: 200px;
+  height: 200px;
+}
+
+.ProfilPage {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.AdminInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    color: #fff;
+    font-weight: bold;
+  }
+  p {
+    color: #fff;
+    width: 300px;
+  }
+  .AdminCall {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      color: #2f66cc;
+      font-weight: bold;
+    }
+  }
+}
+
+.EditBtn {
+  width: 100px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+}

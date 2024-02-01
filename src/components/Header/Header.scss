@@ -1,0 +1,60 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 100px;
+  width: 1166px;
+  background-color: black;
+  float: right;
+  border: 2px solid coral;
+  margin-bottom: 50px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h2 {
+    color: #fff;
+    font-size: 40px;
+  }
+
+  a {
+    color: coral;
+    text-decoration: none;
+  }
+}
+
+.UserName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  button {
+    color: coral;
+    text-decoration: none;
+    border: 2px solid coral;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #fff;
+    font-weight: bold;
+  }
+  h3 {
+    color: coral;
+  }
+}
+
+.LinkLine {
+  display: flex;
+  gap: 20px;
+  a {
+    color: coral;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

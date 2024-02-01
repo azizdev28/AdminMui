@@ -1,0 +1,30 @@
+.Students {
+  width: 960px;
+  height: 460px;
+  display: flex;
+  background-color: coral;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-left: 300px;
+}
+
+.StudentsNavbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.StudentsCard {
+  display: flex;
+  flex-direction: column;
+
+  ul li {
+    display: flex;
+    align-items: center;
+  }
+}
+.StudentLine {
+  width: 200px;
+}

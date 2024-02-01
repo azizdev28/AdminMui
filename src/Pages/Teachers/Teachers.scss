@@ -1,0 +1,56 @@
+.Teacher {
+  width: 960px;
+  height: 450px;
+  display: flex;
+  background-color: coral;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: 240px;
+
+  h1 {
+    margin: 14px 0;
+    border-bottom: 2px solid black;
+  }
+}
+.TeachersCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.CardLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .Line {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 130px;
+  }
+}
+
+.CardNavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+
+  input {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  select {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+  }
+}
