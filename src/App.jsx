@@ -12,7 +12,7 @@ import Profil from "./Pages/Profil/Profil";
 import AddNewTeacher from "./Pages/AddNewTeacher/AddNewTeacher";
 import AddNewStudent from "./Pages/AddNewStudent/AddNewStudent";
 import Login from "./Pages/Login/Login";
-
+import Register from "./components/RegisterPage/Register";
 const App = () => {
   const [user, setUser] = useState("");
   const isUserLoggedIn = !!user;
@@ -34,6 +34,7 @@ const App = () => {
           <Route path="/teachers" element={<Teachers user={user} />} />
           <Route path="/students" element={<Students user={user} />} />
           <Route path="/statistika" element={<Statistika user={user} />} />
+          <Route path="/register" element={<Register user={user} />} />
           <Route path="/profil" element={<Profil />} />
           <Route
             path="/addnewteacher"
