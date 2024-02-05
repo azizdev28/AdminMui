@@ -1,12 +1,13 @@
 .Teacher {
   width: 960px;
-  height: 450px;
+  height: 100vh;
   display: flex;
   background-color: #5b5ce2;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   margin-left: 240px;
+  flex-direction: column;
 
   h1 {
     margin: 14px 0;
@@ -53,4 +54,36 @@
     border-radius: 8px;
     border: none;
   }
+}
+
+.PaginationTeacher {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AddNewTeacherS {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: rgb(47, 255, 92);
+  padding: 3px 6px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btnEditTeacher {
+  background-color: rgb(47, 255, 92);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.btnDeleteTeacher {
+  background-color: red;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
 }

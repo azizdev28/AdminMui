@@ -50,39 +50,42 @@ const TeacherEdit = ({ teacherId, onCancel, onSave }) => {
   return (
     <div className="EditTeacher">
       <h2>Edit Teacher</h2>
-      <label>
-        Name:
-        <input
-          type="text"
-          name="name"
-          value={editedTeacher.name}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Lastname:
-        <input
-          type="text"
-          name="lastname"
-          value={editedTeacher.lastname}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Level:
-        <select
-          name="level"
-          value={editedTeacher.level}
-          onChange={handleChange}
-        >
-          <option value="beginner">Beginner</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="advanced">Advanced</option>
-        </select>
-      </label>
-      {/* Add other fields as needed */}
-      <button onClick={handleSave}>Save</button>
-      <button onClick={onCancel}>Cancel</button>
+      <div className="EditTeacherCard">
+        <label>
+          <input
+            type="text"
+            name="name"
+            value={editedTeacher.name}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <input
+            type="text"
+            name="lastname"
+            value={editedTeacher.lastname}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <select
+            name="level"
+            value={editedTeacher.level}
+            onChange={handleChange}
+          >
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </label>
+        {/* Add other fields as needed */}
+        <button onClick={handleSave} className="EditSave">
+          Save
+        </button>
+        <button onClick={onCancel} className="EditCan">
+          Cancel
+        </button>
+      </div>
     </div>
   );
 };

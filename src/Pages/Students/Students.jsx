@@ -3,6 +3,7 @@ import axios from "axios";
 import "../Students/Students.scss";
 import Pagination from "../../components/Pagination/Pagination";
 import EditStudent from "../../components/EditStudent/EditStudent";
+import { Link } from "react-router-dom";
 
 const Students = () => {
   const [students, setStudents] = useState([]);
@@ -162,6 +163,11 @@ const Students = () => {
             totalPages={Math.ceil(filteredStudents.length / studentsPerPage)}
             onPageChange={paginate}
           />
+
+          <Link to="/addnewstudent" className="AddStudentAll">
+            {" "}
+            Add New Student
+          </Link>
         </div>
 
         <div className="CardStEdit">

@@ -4,6 +4,7 @@ import "../Teachers/Teachers.scss";
 import Pagination from "../../components/Pagination/Pagination";
 import EditTeachers from "../../components/EditTeachers/EditTeachers";
 import AddNewTeacher from "../AddNewTeacher/AddNewTeacher";
+import { Link } from "react-router-dom";
 
 const Teachers = () => {
   const [teachers, setTeachers] = useState([]);
@@ -151,18 +152,33 @@ const Teachers = () => {
                 <p className="Line">{teacher.lastname}</p>
                 <p className="Line">ID: {teacher.id}</p>
                 <p className="Line">Level: {teacher.level}</p>
-                <button onClick={() => handleEdit(teacher.id)}>Edit</button>
-                <button onClick={() => handleDelete(teacher.id)}>Delete</button>
+                <button
+                  onClick={() => handleEdit(teacher.id)}
+                  className="btnEditTeacher"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(teacher.id)}
+                  className="btnDeleteTeacher"
+                >
+                  Delete
+                </button>
               </div>
             ))
           )}
         </div>
 
-        <Pagination
-          currentPage={currentPage}
-          totalPages={Math.ceil(filteredTeachers.length / teachersPerPage)}
-          onPageChange={paginate}
-        />
+        <div className="PaginationTeacher">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={Math.ceil(filteredTeachers.length / teachersPerPage)}
+            onPageChange={paginate}
+          />
+          <Link to="/addnewteacher" className="AddNewTeacherS">
+            + Add New Teacher
+          </Link>
+        </div>
       </div>
 
       <div className="Editing">
@@ -174,7 +190,6 @@ const Teachers = () => {
           />
         )}
       </div>
-
       {/* <AddNewTeacher onNewTeacherAdded={handleNewTeacherAdded} /> */}
     </div>
   );
