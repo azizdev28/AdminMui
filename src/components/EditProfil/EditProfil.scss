@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: coral;
+  background-color: #5b5ce2;
   padding: 10px 20px;
   border-radius: 10px;
   gap: 10px;
@@ -24,14 +24,14 @@
     width: 200px;
     padding: 10px 15px;
     border-radius: 10px;
-    border: 2px solid coral;
-    color: coral;
+    border: 2px solid #5b5ce2;
+    color: #5b5ce2;
     font-weight: bold;
   }
   textarea {
     width: 200px;
-    border: 2px solid coral;
-    color: coral;
+    border: 2px solid #5b5ce2;
+    color: #5b5ce2;
     font-weight: bold;
   }
 
@@ -42,10 +42,10 @@
     button {
       padding: 5px 10px;
       border-radius: 8px;
-      border: 2px solid coral;
+      border: 2px solid #5b5ce2;
       color: black;
       font-weight: bold;
-      background-color: coral;
+      background-color: #5b5ce2;
     }
   }
 }

@@ -5,9 +5,9 @@
   padding: 0 30px;
   height: 100px;
   width: 1166px;
-  background-color: black;
+  background-color: #ffffff;
   float: right;
-  border: 2px solid coral;
+  border: 2px solid #5b5ce2;
   margin-bottom: 50px;
 }
 
@@ -18,12 +18,12 @@
   flex-direction: column;
 
   h2 {
-    color: #fff;
+    color: #5b5ce2;
     font-size: 40px;
   }
 
   a {
-    color: coral;
+    color: #5b5ce2;
     text-decoration: none;
   }
 }
@@ -35,9 +35,9 @@
   gap: 30px;
 
   button {
-    color: coral;
+    color: #5b5ce2;
     text-decoration: none;
-    border: 2px solid coral;
+    border: 2px solid #5b5ce2;
     padding: 5px 12px;
     cursor: pointer;
     border-radius: 8px;
@@ -45,7 +45,7 @@
     font-weight: bold;
   }
   h3 {
-    color: coral;
+    color: #5b5ce2;
   }
 }
 
@@ -53,7 +53,7 @@
   display: flex;
   gap: 20px;
   a {
-    color: coral;
+    color: #5b5ce2;
     font-weight: bold;
     text-decoration: none;
   }
