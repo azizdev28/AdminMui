@@ -1,6 +1,6 @@
 .Students {
   width: 960px;
-  height: 360px;
+  min-height: 360px;
   display: flex;
   background-color: #5b5ce2;
   align-items: center;
@@ -10,65 +10,73 @@
   margin-left: 300px;
   gap: 20px;
 }
-
 .StudentsNavbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 100px;
+  margin-top: 30px;
 
   input {
+    width: 200px;
     border: none;
-    padding: 10px 10px;
+    padding: 5px 20px;
+    color: #5b5ce2;
     border-radius: 10px;
   }
 
   select {
-    border: none;
-    padding: 10px 10px;
     border-radius: 10px;
+    padding: 5px 20px;
   }
 }
-
 .StudentsCard {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: 20px;
 
-  ul li {
+  ul {
     display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+    flex-direction: column;
 
-  span {
-    color: #fff;
-  }
-  .StudentLine {
-    width: 200px;
-    align-items: start;
-  }
+    li {
+      display: flex;
+      padding: 10px 20px;
+      border-bottom: 2px solid black;
 
-  p {
-    font-weight: bolder;
-    font-size: 20px;
-  }
+      .StudentLine {
+        display: flex;
+        justify-content: start;
+        width: 250px;
+        color: #fff;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20px;
+        gap: 30px;
 
-  .btn {
-    border: none;
-    padding: 5px 10px;
-    border-radius: 9px;
-  }
-}
+        span {
+          color: black;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        }
+      }
+      .EditStudentDelete {
+        display: flex;
+        gap: 10px;
 
-.CardSt {
-  width: 960px;
-  height: 160px;
-  display: flex;
-  background-color: #5b5ce2;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-left: 300px;
-  gap: 70px;
+        .btnEdit {
+          background-color: blue;
+          padding: 2px 7px;
+          border-radius: 8px;
+          color: #fff;
+          border: 2px solid #fff;
+        }
+
+        .btnDelete {
+          background-color: red;
+          border-radius: 8px;
+          color: #fff;
+          padding: 2px 7px;
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
 }

@@ -126,7 +126,7 @@ const Students = () => {
               {currentStudents.map((student) => (
                 <li key={student.id}>
                   <h3 className="StudentLine">
-                    <span>Name:</span> {student.name}{" "}
+                    <span>Name:</span> {student.name}
                   </h3>
 
                   <h3 className="StudentLine">
@@ -136,42 +136,43 @@ const Students = () => {
                     <span>Group:</span>
                     {student.group}
                   </p>
-                  <button
-                    onClick={() => handleEdit(student.id)}
-                    className="btn"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDelete(student.id)}
-                    className="btn"
-                  >
-                    Delete
-                  </button>
+                  <div className="EditStudentDelete">
+                    <button
+                      onClick={() => handleEdit(student.id)}
+                      className="btnEdit"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDelete(student.id)}
+                      className="btnDelete"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>
-            <div>
-              <Pagination
-                currentPage={currentPage}
-                totalPages={Math.ceil(
-                  filteredStudents.length / studentsPerPage
-                )}
-                onPageChange={paginate}
-              />
-            </div>
           </div>
         )}
-      </div>
 
-      <div className="CardSt">
-        {editingStudentId && (
-          <EditStudent
-            studentId={editingStudentId}
-            onCancel={handleCancelEdit}
-            onSave={handleSaveEdit}
+        <div className="Pagination">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={Math.ceil(filteredStudents.length / studentsPerPage)}
+            onPageChange={paginate}
           />
-        )}
+        </div>
+
+        <div className="CardStEdit">
+          {editingStudentId && (
+            <EditStudent
+              studentId={editingStudentId}
+              onCancel={handleCancelEdit}
+              onSave={handleSaveEdit}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

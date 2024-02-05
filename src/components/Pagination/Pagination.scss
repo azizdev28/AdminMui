@@ -1,18 +1,17 @@
 .pagination {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   justify-content: center;
-  margin-top: 25px;
 
-  li {
+  li button {
     display: flex;
     align-items: center;
     justify-content: center;
-    button {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: none;
-    }
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    color: blue;
+    margin-bottom: 30px;
   }
 }

@@ -13,6 +13,7 @@ const Teachers = () => {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("all");
+  const [sortBy, setSortBy] = useState("asc"); // "asc" or "desc"
   const [editingTeacherId, setEditingTeacherId] = useState(null);
 
   useEffect(() => {
@@ -49,7 +50,18 @@ const Teachers = () => {
       return teacher.level.toLowerCase() === selectedLevel.toLowerCase();
     });
 
-  const currentTeachers = filteredTeachers.slice(
+  const sortedTeachers = filteredTeachers.sort((a, b) => {
+    const nameA = `${a.name} ${a.lastname}`.toLowerCase();
+    const nameB = `${b.name} ${b.lastname}`.toLowerCase();
+
+    if (sortBy === "asc") {
+      return nameA.localeCompare(nameB);
+    } else {
+      return nameB.localeCompare(nameA);
+    }
+  });
+
+  const currentTeachers = sortedTeachers.slice(
     indexOfFirstTeacher,
     indexOfLastTeacher
   );
@@ -64,6 +76,10 @@ const Teachers = () => {
   const handleLevelChange = (e) => {
     setSelectedLevel(e.target.value);
     setCurrentPage(1);
+  };
+
+  const handleSortChange = (e) => {
+    setSortBy(e.target.value);
   };
 
   const handleEdit = (id) => {
@@ -112,6 +128,12 @@ const Teachers = () => {
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
           </select>
+          <label>
+            <select value={sortBy} onChange={handleSortChange}>
+              <option value="asc">A-Z</option>
+              <option value="desc">Z-A</option>
+            </select>
+          </label>
         </div>
 
         <div className="TeachersCard">

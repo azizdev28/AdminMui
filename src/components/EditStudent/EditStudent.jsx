@@ -60,7 +60,7 @@ const EditStudent = ({ studentId, onCancel, onSave }) => {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <div>
+        <div className="EditForm">
           <h2>Edit Student</h2>
           <form className="EditStudentSe">
             <label>
@@ -90,12 +90,14 @@ const EditStudent = ({ studentId, onCancel, onSave }) => {
                 onChange={handleInputChange}
               />
             </label>
-            <button type="button" onClick={handleSave}>
-              Save
-            </button>
-            <button type="button" onClick={handleCancel}>
-              Cancel
-            </button>
+            <div className="saveCancel">
+              <button type="button" onClick={handleSave} className="Save">
+                Save
+              </button>
+              <button type="button" onClick={handleCancel} className="Cancel">
+                Cancel
+              </button>
+            </div>
           </form>
         </div>
       )}

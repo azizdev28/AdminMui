@@ -10,7 +10,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     <div>
       <ul className="pagination">
         {pageNumbers.map((number) => (
-          <li key={number}>
+          <li key={number} className="Pagi">
             <button onClick={() => onPageChange(number)}>{number}</button>
           </li>
         ))}
